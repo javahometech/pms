@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 9, 2013 10:29:21 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.jhome.pojo.Customer" table="CUSTOMER">
+        <id name="phoneNo" type="java.lang.String">
+            <column name="PHONENO" />
+        </id>
+        <property name="custName" type="java.lang.String">
+            <column name="CUSTNAME" />
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+    </class>
+</hibernate-mapping>
