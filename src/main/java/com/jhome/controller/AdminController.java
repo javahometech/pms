@@ -25,6 +25,9 @@ public class AdminController {
 	void test1Method(){
 		//some changes
 	}
+	void twoMethod(){
+		//added changes
+	}
 	
 	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
 	public void addUserForm(@ModelAttribute("user") User user) {
@@ -56,7 +59,7 @@ public class AdminController {
 	public void test(){
 		System.out.println("Added by Aruna");
 		System.out.println(" Added Test Method !!!!!!!!!!!!!");
-		
+		System.out.println("some add changes by ammu");
 	}
 
 	/*
