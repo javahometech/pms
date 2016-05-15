@@ -54,6 +54,10 @@ public class AdminController {
 		// map.put("sucess", "user has created");
 		return "addUser";
 	}
+	
+	public void test(){
+		
+	}
 
 	/*
 	 * when admin menu is clicked control comes here,this method will executed
