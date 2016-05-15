@@ -20,22 +20,6 @@ public class AdminController {
 	@Autowired
 	private IAdminDao adminDao;
 
-	void arunasMethod() {
-		// Aruna;s logic
-	}
-
-	void hiMethod() {
-		// some changes
-		System.out.println("Added");
-	}
-
-	void twoMethod() {
-		// added changes
-	}
-
-	void helloWorldmethod() {
-		// helloWorld java
-	}
 
 	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
 	public void addUserForm(@ModelAttribute("user") User user) {
