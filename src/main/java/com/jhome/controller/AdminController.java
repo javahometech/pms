@@ -19,6 +19,10 @@ import com.jhome.pojo.User;
 public class AdminController {
 	@Autowired
 	private IAdminDao adminDao;
+	
+	public void sonyMethod(){
+	System.out.println("some text msg...................");
+	}
 
 
 	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
