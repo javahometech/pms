@@ -22,19 +22,24 @@ public class AdminController {
 	void arunasMethod(){
 		// Aruna;s logic
 	}
-	void test1Method(){
+	void hiMethod(){
 		//some changes
 	}
 	void twoMethod(){
 		//added changes
 	}
 	
+	void helloWorldmethod(){
+		//helloWorld java
+	}
 	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
 	public void addUserForm(@ModelAttribute("user") User user) {
 		System.out.println("this is add user method in Employee Controller");
 		System.out.println("Aruna Sysout");
 		System.out.println("some add the functionality");
-		System.out.println("some new methods");
+		System.out.println("hello world java!!!!!!!!!!!!!!!!!!!");
+		System.out.println("this is amrutha");
+		System.out.println("added new sysout by Siva");
 		
 	}
 
@@ -59,7 +64,10 @@ public class AdminController {
 	public void test(){
 		System.out.println("Added by Aruna");
 		System.out.println(" Added Test Method !!!!!!!!!!!!!");
+
 		System.out.println("some add changes by ammu");
+		System.out.println("added new sysout by Siva");
+		
 	}
 
 	/*
