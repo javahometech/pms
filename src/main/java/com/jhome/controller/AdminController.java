@@ -19,12 +19,14 @@ import com.jhome.pojo.User;
 public class AdminController {
 	@Autowired
 	private IAdminDao adminDao;
-
+	void arunasMethod(){
+		// Aruna;s logic
+	}
 	
 	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
 	public void addUserForm(@ModelAttribute("user") User user) {
 		System.out.println("this is add user method in Employee Controller");
-
+		System.out.println("Aruna Sysout");
 	}
 
 	@RequestMapping(value = "/addUser", method = RequestMethod.POST)
