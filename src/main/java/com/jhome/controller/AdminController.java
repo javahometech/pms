@@ -33,6 +33,7 @@ public class AdminController {
 	
 	public void test(){
 		System.out.println(" test method");
+		System.out.println(" Added Test Method !!!!!!!!!!!!!");
 	}
 	
 	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
@@ -40,6 +41,9 @@ public class AdminController {
 		System.out.println("this is add user method in Employee Controller");
 		System.out.println("Aruna Sysout");
 		System.out.println("Amrutha method");
+		System.out.println("some add the functionality");
+		System.out.println("hello world java!!!!!!!!!!!!!!!!!!!");
+		
 	}
 
 	@RequestMapping(value = "/addUser", method = RequestMethod.POST)
@@ -59,7 +63,7 @@ public class AdminController {
 		// map.put("sucess", "user has created");
 		return "addUser";
 	}
-
+	
 	/*
 	 * when admin menu is clicked control comes here,this method will executed
 	 * and admin.jsp will be open
