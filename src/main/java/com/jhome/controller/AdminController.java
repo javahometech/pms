@@ -22,6 +22,9 @@ public class AdminController {
 	void arunasMethod(){
 		// Aruna;s logic
 	}
+	public AdminController() {
+		// TODO Auto-generated constructor stub
+	}
 	void amruthamethod()
 	{
 		
