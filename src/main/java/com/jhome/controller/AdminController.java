@@ -28,7 +28,6 @@ public class AdminController {
 	void twoMethod(){
 		//added changes
 	}
-	
 	void helloWorldmethod(){
 		//helloWorld java
 	}
@@ -64,7 +63,6 @@ public class AdminController {
 	public void test(){
 		System.out.println("Added by Aruna");
 		System.out.println(" Added Test Method !!!!!!!!!!!!!");
-
 		System.out.println("some add changes by ammu");
 		System.out.println("added new sysout by Siva");
 		

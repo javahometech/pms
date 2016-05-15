@@ -21,6 +21,7 @@ public class AdminDaoImpl implements IAdminDao {
 
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Employee> viewEmp() {
 
 		return (List<Employee>) template.find("from Employee");
