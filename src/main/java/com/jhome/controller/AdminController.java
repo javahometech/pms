@@ -35,6 +35,7 @@ public class AdminController {
 		System.out.println("some add the functionality");
 		System.out.println("hello world java!!!!!!!!!!!!!!!!!!!");
 		System.out.println("this is amrutha");
+		System.out.println("added new sysout by Siva");
 		
 	}
 
