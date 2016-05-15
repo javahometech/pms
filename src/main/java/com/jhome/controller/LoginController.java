@@ -26,7 +26,7 @@ public class LoginController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	private void getLogin(@ModelAttribute("login") User user) {
-
+System.out.println("login");
 		System.out.println("this is getlogin controller method in  admin controller");
 
 	}
