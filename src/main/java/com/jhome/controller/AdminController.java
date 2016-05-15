@@ -31,6 +31,10 @@ public class AdminController {
 		
 	}
 	
+	public void test(){
+		System.out.println(" test method");
+	}
+	
 	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
 	public void addUserForm(@ModelAttribute("user") User user) {
 		System.out.println("this is add user method in Employee Controller");
