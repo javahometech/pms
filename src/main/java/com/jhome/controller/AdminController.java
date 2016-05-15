@@ -33,6 +33,7 @@ public class AdminController {
 		System.out.println("hello world java!!!!!!!!!!!!!!!!!!!");
 		System.out.println("this is amrutha");
 		System.out.println("added new sysout by Siva");
+		System.out.println("new method is added ");
 
 	}
 
