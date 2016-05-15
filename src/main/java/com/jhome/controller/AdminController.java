@@ -22,11 +22,16 @@ public class AdminController {
 	void arunasMethod(){
 		// Aruna;s logic
 	}
+	void hiMethod(){
+		//some changes
+	}
 	
 	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
 	public void addUserForm(@ModelAttribute("user") User user) {
 		System.out.println("this is add user method in Employee Controller");
 		System.out.println("Aruna Sysout");
+		System.out.println("some add the functionality");
+		
 	}
 
 	@RequestMapping(value = "/addUser", method = RequestMethod.POST)
