@@ -19,18 +19,24 @@ import com.jhome.pojo.User;
 public class AdminController {
 	@Autowired
 	private IAdminDao adminDao;
-	void arunasMethod(){
+
+	void arunasMethod() {
 		// Aruna;s logic
 	}
-	void hiMethod(){
-		//some changes
+
+	void hiMethod() {
+		// some changes
+		System.out.println("Added");
 	}
-	void twoMethod(){
-		//added changes
+
+	void twoMethod() {
+		// added changes
 	}
-	void helloWorldmethod(){
-		//helloWorld java
+
+	void helloWorldmethod() {
+		// helloWorld java
 	}
+
 	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
 	public void addUserForm(@ModelAttribute("user") User user) {
 		System.out.println("this is add user method in Employee Controller");
@@ -39,33 +45,31 @@ public class AdminController {
 		System.out.println("hello world java!!!!!!!!!!!!!!!!!!!");
 		System.out.println("this is amrutha");
 		System.out.println("added new sysout by Siva");
-		
+
 	}
 
 	@RequestMapping(value = "/addUser", method = RequestMethod.POST)
-	public String addUser(@Valid @ModelAttribute("user") User user,
-			BindingResult results) {
+	public String addUser(@Valid @ModelAttribute("user") User user, BindingResult results) {
 
 		System.out.println("this is adduser post method");
 
 		if (results.hasErrors()) {
 			return "addUser";
 		}
-		System.out.println(".............add user method........."
-				+ user.getUserName() + "pass" + user.getPassword());
+		System.out.println(".............add user method........." + user.getUserName() + "pass" + user.getPassword());
 		System.out.println("..." + adminDao);
 		adminDao.addUser(user);
 		System.out.println("user add.........");
 		// map.put("sucess", "user has created");
 		return "addUser";
 	}
-	
-	public void test(){
+
+	public void test() {
 		System.out.println("Added by Aruna");
 		System.out.println(" Added Test Method !!!!!!!!!!!!!");
 		System.out.println("some add changes by ammu");
 		System.out.println("added new sysout by Siva");
-		
+
 	}
 
 	/*
@@ -83,28 +87,23 @@ public class AdminController {
 	 * execute this method and display addemployee.jsp
 	 */
 	@RequestMapping(value = "/addEmployee", method = RequestMethod.GET)
-	public void employeeForm(@ModelAttribute("emp") Employee employee,
-			ModelMap map) {
+	public void employeeForm(@ModelAttribute("emp") Employee employee, ModelMap map) {
 		map.put("operation", "save");
-		System.out
-				.println("this is the addEmployee() method in Admin controller ");
+		System.out.println("this is the addEmployee() method in Admin controller ");
 
 	}
 
 	/* This method is used to store the employee data into data base */
 
 	@RequestMapping(value = "/addEmployee", method = RequestMethod.POST)
-	public String addEmployee(
-			@Valid @ModelAttribute("emp") Employee employeepojo,
-			BindingResult result, ModelMap map) {
+	public String addEmployee(@Valid @ModelAttribute("emp") Employee employeepojo, BindingResult result, ModelMap map) {
 		map.put("operation", "save");
 		if (result.hasErrors())
 
 			return "addEmployee";
 
 		adminDao.addEmployee(employeepojo);
-		System.out
-				.println("this is the addEmployee() method in Admin controller ");
+		System.out.println("this is the addEmployee() method in Admin controller ");
 		return "admin";
 	}
 
@@ -113,8 +112,7 @@ public class AdminController {
 	 * Admin page.
 	 */
 	@RequestMapping(value = "/viewEmp", method = RequestMethod.GET)
-	public String viewEmp(@ModelAttribute("emp") Employee employeePojo,
-			ModelMap map) {
+	public String viewEmp(@ModelAttribute("emp") Employee employeePojo, ModelMap map) {
 
 		map.put("employeeList", adminDao.viewEmp());
 
@@ -122,26 +120,28 @@ public class AdminController {
 		return "viewEmp";
 	}
 
-	/* this method is executed when user clicked delete hyper link in Admin page */
+	/*
+	 * this method is executed when user clicked delete hyper link in Admin page
+	 */
 	@RequestMapping(value = "/deleteEmp", method = RequestMethod.GET)
 	public String deleteEmp(@RequestParam("empId") Integer id) {
 
 		adminDao.deleteEmp(id);
-		System.out
-				.println("this is deleteEmp() method in emp controller after deleteteEmp() executed");
+		System.out.println("this is deleteEmp() method in emp controller after deleteteEmp() executed");
 		return "viewEmp";
 	}
 
-	/* this method is executed when user clicked update hyper link in Admin page */
+	/*
+	 * this method is executed when user clicked update hyper link in Admin page
+	 */
 	@RequestMapping(value = "/updateEmp", method = RequestMethod.GET)
-	public String updateEmps(@RequestParam("empId") Integer id,
-			@ModelAttribute("emp") Employee employeePojo, ModelMap map) {
+	public String updateEmps(@RequestParam("empId") Integer id, @ModelAttribute("emp") Employee employeePojo,
+			ModelMap map) {
 		System.out.println("update employee............");
 		map.put("emp", adminDao.getEmp(id));
 		map.put("operation", "update");
 
-		System.out
-				.println("this is UpdateEmp() get method in EmployeeController");
+		System.out.println("this is UpdateEmp() get method in EmployeeController");
 		return "addEmployee";
 	}
 
@@ -150,19 +150,15 @@ public class AdminController {
 	 * addEmployee.jsp along with details of a employee.
 	 */
 	@RequestMapping(value = "/updateEmp", method = RequestMethod.POST)
-	public String updateEmp(
-			@Valid @ModelAttribute("emp") Employee employeePojo,
-			BindingResult result, ModelMap map) {
+	public String updateEmp(@Valid @ModelAttribute("emp") Employee employeePojo, BindingResult result, ModelMap map) {
 		map.put("operation", "update");
 		if (result.hasErrors())
 			return "addEmployee";
 
-		System.out.println("update employee post............"
-				+ employeePojo.getEmpid() + "requstid");
+		System.out.println("update employee post............" + employeePojo.getEmpid() + "requstid");
 		adminDao.updateEmp(employeePojo);
 
-		System.out
-				.println("this is UpdateEmp() post method in EmployeeController");
+		System.out.println("this is UpdateEmp() post method in EmployeeController");
 		return "admin";
 
 	}
@@ -173,8 +169,8 @@ public class AdminController {
 	 * @ExceptionHandler(Exception.class) public String exception(Exception e) {
 	 * // TODO Auto-generated method stub
 	 * 
-	 * System.out
-	 * .println("this is from exception method in Employee controller ");
+	 * System.out .println(
+	 * "this is from exception method in Employee controller ");
 	 * 
 	 * return "admin"; }
 	 */
