@@ -33,7 +33,7 @@ public class AdminController {
 		System.out.println("this is add user method in Employee Controller");
 		System.out.println("Aruna Sysout");
 		System.out.println("some add the functionality");
-		System.out.println("hello world java!!!!!!!!!!!!!!!!!!!");
+		System.out.println("some new methods");
 		
 	}
 
