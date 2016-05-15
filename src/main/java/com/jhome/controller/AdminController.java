@@ -57,6 +57,8 @@ public class AdminController {
 	
 	public void test(){
 		
+		System.out.println(" Added Test Method !!!!!!!!!!!!!");
+		
 	}
 
 	/*
