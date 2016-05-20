@@ -23,6 +23,10 @@ public class AdminController {
 	public void sonyMethod(){
 	System.out.println("some text msg...................");
 	}
+	
+	void doStuff(){
+		// Development done for branchn1.2
+	}
 
 
 	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
