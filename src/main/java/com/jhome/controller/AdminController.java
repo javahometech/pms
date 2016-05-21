@@ -31,6 +31,7 @@ public class AdminController {
 
 	void twoMethod() {
 		// added changes
+		System.out.println("Added");
 	}
 
 	void helloWorldmethod() {

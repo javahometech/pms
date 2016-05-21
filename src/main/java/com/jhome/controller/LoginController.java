@@ -23,12 +23,15 @@ public class LoginController {
 
 	@Autowired
 	ILoginService service;
+void m(){
+}
+
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	private void getLogin(@ModelAttribute("login") User user) {
-System.out.println("login");
+	public String getLogin(@ModelAttribute("login") User user) {
+		System.out.println("login");
 		System.out.println("this is getlogin controller method in  admin controller");
-
+		return "login";
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -37,8 +40,7 @@ System.out.println("login");
 		if (result.hasErrors()) {
 			return "login";
 		}
-		
-		
+
 		if (service.authenticate(user)) {
 			return "home";
 		} else {
