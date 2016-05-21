@@ -28,7 +28,9 @@ public class AdminController {
 		// Development done for branchn1.2
 	}
 
-
+public void A(){
+	// Created the new branch and branch name is 1.3
+}
 	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
 	public void addUserForm(@ModelAttribute("user") User user) {
 		System.out.println("this is add user method in Employee Controller");
